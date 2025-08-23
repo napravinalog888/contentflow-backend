@@ -9,7 +9,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/health", (req, res) => {
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
+app.get("/status", (req, res) => {
   res.json({ status: "ok", message: "Backend is running 🚀" });
 });
 
